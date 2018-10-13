@@ -1,0 +1,18 @@
+name: RandomRespawn
+author: hydranapse_
+main: com.ericlam.main.RandomRespawn
+api-version: 1.13
+version: 0.0.1
+commands:
+  addspawn:
+    aliases: gtaaddspawn
+    description: add new spawn
+  removespawn:
+    aliases: gtaremovespawn
+    description: remove spawn
+  randomspawn:
+    aliases: gtarandomspawn
+    description: tp to random spawn
+  setmaxhealth:
+    aliases: gtasetmaxhealth
+    description: set max health
