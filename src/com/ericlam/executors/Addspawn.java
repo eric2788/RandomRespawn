@@ -33,6 +33,11 @@ public class Addspawn implements CommandExecutor {
 
         Player player = (Player) commandSender;
 
+        if(!player.hasPermission("rr.admin")) {
+            player.sendMessage(Config.getInstance().getPrefix()+"§c你沒有權限!");
+            return false;
+        }
+
         if (strings.length != 1){
             player.sendMessage(cf.getPrefix()+"§a/addspawn <名稱>");
             return false;

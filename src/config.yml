@@ -1,4 +1,12 @@
+# prefix :前綴
+# enable-nearest-respawn :true 是 找附近重生點, false 是找隨機重生點
+# use-custom-respawn :true時，死亡將改為觀戰延遲
+# respawn-delay :僅限上方為true的時候才有效
+# spawn :使用/addspawn 添加重生點
 prefix: "&6[GTA]&7 "
+enable-nearest-respawn: true
 maxhealth: 100
 healthscale: 20
-spawn: #使用/addspawn 添加重生點
+use-custom-respawn: false
+respawn-delay: 10
+spawn:

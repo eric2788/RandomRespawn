@@ -1,12 +1,12 @@
 package com.ericlam.main;
 
-import com.ericlam.executors.Addspawn;
-import com.ericlam.executors.Randomspawn;
-import com.ericlam.executors.Removespawn;
-import com.ericlam.executors.Setmaxhealth;
+import com.ericlam.addon.StatusManager;
+import com.ericlam.executors.*;
 import com.ericlam.listener.Onjoin;
 import com.ericlam.listener.Onrespawn;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -29,6 +29,8 @@ public class RandomRespawn extends JavaPlugin {
         getCommand("addspawn").setExecutor(new Addspawn(this));
         getCommand("removespawn").setExecutor(new Removespawn(this));
         getCommand("setmaxhealth").setExecutor(new Setmaxhealth(this));
+        getCommand("nearestspawn").setExecutor(new Nearestspawn(this));
+        getCommand("spawnlist").setExecutor(new Spawnlist(this));
 
         /*
         EventListeners
@@ -42,6 +44,9 @@ public class RandomRespawn extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        for (Player player : Bukkit.getOnlinePlayers()){
+            StatusManager.getInstance().handleQuit(player);
+        }
         getLogger().info("RandomRespawn Disabled.");
     }
 }

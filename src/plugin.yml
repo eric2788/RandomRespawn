@@ -16,3 +16,9 @@ commands:
   setmaxhealth:
     aliases: gtasetmaxhealth
     description: set max health
+  nearestspawn:
+    aliases: gtanearestspawn
+    description: tp to nearest spawn
+  spawnlist:
+    aliases: gtaspawnlist
+    description: list all the teleport name

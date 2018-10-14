@@ -9,9 +9,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Randomspawn implements CommandExecutor {
+public class Nearestspawn implements CommandExecutor {
     private final RandomRespawn plugin;
-    public Randomspawn(RandomRespawn plugin){
+    public Nearestspawn(RandomRespawn plugin){
         this.plugin = plugin;
     }
 
@@ -24,12 +24,12 @@ public class Randomspawn implements CommandExecutor {
 
         Player player = (Player) commandSender;
 
-        if(!player.hasPermission("rr.random")) {
+        if(!player.hasPermission("rr.nearest")) {
             player.sendMessage(Config.getInstance().getPrefix()+"§c你沒有權限!");
             return false;
         }
 
-        Location spawn = new TPManager().getRandomLocation(player,null);
+        Location spawn = new TPManager().getNearestLocation(player,null);
 
         player.teleport(spawn);
 
