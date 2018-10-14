@@ -1,6 +1,14 @@
 # RandomRespawn
 受委託於 MineStrike 伺服器
 
+
+## 演示
+
+
+## [下載插件](http://gestyy.com/wZsJc0)
+(有問題請善用Issue)
+
+
 ## 功能
 
 - ### 重生傳送模式(兩個)
@@ -22,11 +30,6 @@
   ### 特殊指令
   - /randomspawn - 隨機傳送至一個重生點 (需要權限 rr.random)
   - /nearestspawn - 傳送至距離玩家最近的一個重生點 (需要權限 rr.nearest)
-  
-## 演示
-
-
-## 下載插件
-(有問題請善用Issue)
+ 
   
   
