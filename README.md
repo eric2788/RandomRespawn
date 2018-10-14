@@ -3,7 +3,7 @@
 
 
 ## 演示
-
+[![插件演示](https://img.youtube.com/vi/0tXYNqHz65o/0.jpg)](https://www.youtube.com/watch?v=0tXYNqHz65o)
 
 ## [下載插件](http://gestyy.com/wZsJc0)
 (有問題請善用Issue)
