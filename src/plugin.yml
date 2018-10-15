@@ -2,7 +2,7 @@ name: RandomRespawn
 author: hydranapse_
 main: com.ericlam.main.RandomRespawn
 api-version: 1.13
-version: 0.0.1
+version: 1.5
 commands:
   addspawn:
     aliases: gtaaddspawn

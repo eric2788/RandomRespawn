@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class TPManager {
     private Location spawn;
@@ -106,7 +107,13 @@ public class TPManager {
             return orig;
         }
 
-        int Max = keys.size() - 1;
+        //player.sendMessage("DEBUG: before:");
+        //player.sendMessage(keys.toArray(new String[0]));
+        Set<String> filteredKey = keys.stream().filter(k -> Bukkit.getWorld(config.getString("spawn." + k + ".world")) == orig.getWorld() ).collect(Collectors.toSet());
+        //player.sendMessage("DEBUG: after:");
+        //player.sendMessage(filteredKey.toArray(new String[0]));
+
+        int Max = filteredKey.size() - 1;
 
 
         int result = randomWithRange(0,Max);
@@ -117,7 +124,7 @@ public class TPManager {
         player.sendMessage("You get: "+result);
         player.sendMessage("===============");*/
 
-        Iterator<String> key = keys.iterator();
+        Iterator<String> key = filteredKey.iterator();
 
         int i = 0;
         while(key.hasNext()){
@@ -125,9 +132,6 @@ public class TPManager {
             if (i == result){
                 //player.sendMessage("DEBUG: send you to teleport name: "+name);
                 World world = Bukkit.getWorld(config.getString("spawn."+name+".world"));
-                if (world != orig.getWorld()){
-                    continue;
-                }
                 double x = config.getDouble("spawn."+name+".x");
                 double y = config.getDouble("spawn."+name+".y");
                 double z = config.getDouble("spawn."+name+".z");
