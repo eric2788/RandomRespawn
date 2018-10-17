@@ -1,7 +1,7 @@
 # RandomRespawn
 受委託於 MineStrike 伺服器
 
-版本： 1.13.1
+###版本： 1.13.1
 
 
 ## 演示
