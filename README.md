@@ -1,6 +1,8 @@
 # RandomRespawn
 受委託於 MineStrike 伺服器
 
+版本： 1.13.1
+
 
 ## 演示
 [![插件演示](https://img.youtube.com/vi/0tXYNqHz65o/0.jpg)](https://www.youtube.com/watch?v=0tXYNqHz65o)
